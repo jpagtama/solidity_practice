@@ -8,3 +8,18 @@ const web3 = new Web3(ganache.provider());
 //in order for web3 to communicate with a network it needs a provider
 //the provider is like a phone that communicates between web3 and ganache
 
+let accounts;
+
+beforeEach(async () => {
+    //get a list of all accounts
+    accounts = await web3.eth.getAccounts();
+
+    //use one of those accounts to deploy the contract
+
+});
+
+describe('Inbox', () => {
+    it('deploys a contract', () => {
+        console.log("accounts",accounts);
+    });
+});
